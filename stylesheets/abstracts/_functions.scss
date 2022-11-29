@@ -18,7 +18,7 @@
 /// @return {Url}
 /// @require $base-url
 @function image($path, $base: v.$base-url) {
-  @return asset($base, 'images/', $path);
+  @return asset($base, "images/", $path);
 }
 
 /// Returns URL to a font based on its path
@@ -27,5 +27,5 @@
 /// @return {Url}
 /// @require $base-url
 @function font($path, $base: v.$base-url) {
-  @return asset($base, 'fonts/', $path);
+  @return asset($base, "fonts/", $path);
 }
