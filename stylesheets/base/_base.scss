@@ -1,6 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
+
+/// Load custom modules
 @use "../abstracts/" as a;
 
 /**
@@ -8,6 +10,14 @@
  */
 html {
   box-sizing: border-box;
+}
+
+/**
+ * Make the page content fill the whole browser window
+ */
+html,
+body {
+  height: 100vh;
 }
 
 /**
@@ -23,14 +33,48 @@ html {
 }
 
 /**
+ * Remove default margin
+ */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/**
  * Basic styles for links
  */
 a {
-  color: a.$brand-color;
+  color: a.theme-color("primary");
   text-decoration: none;
 
   @include a.on-event {
-    color: a.$text-color;
     text-decoration: underline;
   }
+}
+
+/**
+ * Make images easier to work with
+ */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/**
+ * Basic styles for buttons
+ */
+button {
+  border: none;
+  background-color: unset;
+  display: inline-block;
+}
+
+/**
+ * Basic styles for inputs
+ */
+input {
+  display: block;
 }
